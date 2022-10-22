@@ -31,9 +31,12 @@ L'application a été réalisée dans le cadre d'une épreuve au World Skills 20
 
 ### ✦ Documentation
 
- >*Afin de pouvoir mettre en place le site "Medway" sur sa machine il est necessaire de réaliser plusieurs étapes cités ci-dessous*
+ `Afin de pouvoir mettre en place le site "Medway" sur sa machine il est necessaire de réaliser plusieurs étapes cités ci-dessous`
 
-`TOUT SIMPLEMENT : C'EST JUSTE UN AUTRE TYPE DE FICHIER TEXTE, COMME .txt .doc ....( ICI C'EST .md :laughing:) ET IL POSSÈDE UNE SYNTAXE SPÉCIALE.`
+>*1. Télécharger le logiciel Wamp sur Windows, Mamp sur Mac & Lamp sur Linux afin de pouvoir utiliser son ordinateur commee serveur local.
+>    Une fois le logiciel installé, lancez le service*
+
+>*2. Accedez au répertoire /c*
 
 ### ✦ Schéma MCD de la base de donnée MySQL
 
