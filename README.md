@@ -1,6 +1,6 @@
 <img src="https://zupimages.net/up/22/39/wybl.png" alt="Image de présentation" />
 
-### ✦ # Medway - La route de votre médecin 👨‍⚕️
+### ✦ Medway - La route de votre médecin 👨‍⚕️
 
 Application médicale qui permet la gestion & prise de rendez-vous.
 
@@ -28,10 +28,18 @@ Application médicale qui permet la gestion & prise de rendez-vous.
 
 ### ✦ Documentation
 
-Afin de pouvoir mettre en place le site "Medway" sur sa machine il est necessaire de réaliser plusieurs étapes cités ci-dessous
+ >*Afin de pouvoir mettre en place le site "Medway" sur sa machine il est necessaire de réaliser plusieurs étapes cités ci-dessous*
+
+`TOUT SIMPLEMENT : C'EST JUSTE UN AUTRE TYPE DE FICHIER TEXTE, COMME .txt .doc ....( ICI C'EST .md :laughing:) ET IL POSSÈDE UNE SYNTAXE SPÉCIALE.`
 
 ### ✦ Schéma MCD de la base de donnée MySQL
 
-Array
+| Format        | Syntaxe      | Exemple |
+| ------|-----|-----|
+| Italique  	| \*Texte\* 	| *C'est en italique* 	|
+
+> **Note**:
+
+> **Warning**:
 
 https://user-images.githubusercontent.com/60849907/197188581-21663556-937a-4fff-9a2f-d0c79c47e70a.mp4
