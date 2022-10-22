@@ -4,6 +4,9 @@
 
 Application médicale qui permet la gestion & prise de rendez-vous.
 
+> **Note**:
+L'application a été réalisée dans le cadre d'une épreuve au World Skills 2022 (finale régionale à Bordeaux 🇫🇷)
+
 ### ✦ Options supplémentaires implémentés
 
 - Saisie automatique des informations du patient (poids, taille..) lors de la gestion pour le médecin si le patient a déjà eu l'occasion de se faire traiter par le practicien en question.
@@ -38,7 +41,7 @@ Application médicale qui permet la gestion & prise de rendez-vous.
 | ------|-----|-----|
 | Italique  	| \*Texte\* 	| *C'est en italique* 	|
 
-> **Note**:
+
 
 > **Warning**:
 
