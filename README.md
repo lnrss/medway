@@ -20,11 +20,11 @@ L'application a été réalisée dans le cadre d'une épreuve au World Skills 20
 
 ### ✦ Technologies utilisées
 
-ɢʀᴀᴘʜɪsᴍᴇ ﹠ ᴍᴏᴛɪᴏɴ ᴅᴇsɪɢɴ ↓
+ɢʀᴀᴘʜɪsᴍᴇ ﹠ ᴍᴏᴛɪᴏɴ ᴅᴇsɪɢɴ ↓<br/>
 `Illustrator / Figma`<br/>
 `After Effects`<br/>
 
-ᴅᴇ́ᴠᴇʟᴏᴘᴘᴇᴍᴇɴᴛ ғʀᴏɴᴛ﹣ᴇɴᴅ ﹠ ʙᴀᴄᴋ﹣ᴇɴᴅ ↓
+ᴅᴇ́ᴠᴇʟᴏᴘᴘᴇᴍᴇɴᴛ ғʀᴏɴᴛ﹣ᴇɴᴅ ﹠ ʙᴀᴄᴋ﹣ᴇɴᴅ ↓<br/>
 `HTML5 / CSS3 / JavaScript`<br/>
 `PHP`<br/>
 `MySQL`<br/>
