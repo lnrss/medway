@@ -55,6 +55,6 @@ Une fois le logiciel installé, l'application puis cliquer sur "Start".
 
 > **Note**:
 #: Clé primaire<br/>
-_: Clé étrangère
+    _: Clé étrangère
 
 https://user-images.githubusercontent.com/60849907/197188581-21663556-937a-4fff-9a2f-d0c79c47e70a.mp4
