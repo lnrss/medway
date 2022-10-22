@@ -21,13 +21,13 @@ L'application a été réalisée dans le cadre d'une épreuve au World Skills 20
 ### ✦ Technologies utilisées
 
 ɢʀᴀᴘʜɪsᴍᴇ ﹠ ᴍᴏᴛɪᴏɴ ᴅᴇsɪɢɴ ↓
-`- Illustrator / Figma`
-`- After Effects`
+`Illustrator / Figma`<br/>
+`After Effects`<br/>
 
 ᴅᴇ́ᴠᴇʟᴏᴘᴘᴇᴍᴇɴᴛ ғʀᴏɴᴛ﹣ᴇɴᴅ ﹠ ʙᴀᴄᴋ﹣ᴇɴᴅ ↓
-`- HTML5 / CSS3 / JavaScript`
-`- PHP`
-`- MySQL`
+`HTML5 / CSS3 / JavaScript`<br/>
+`PHP`<br/>
+`MySQL`<br/>
 
 ### ✦ Documentation
 
