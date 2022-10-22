@@ -53,6 +53,9 @@ Une fois le logiciel installé, l'application puis cliquer sur "Start".
 | meet(#idMeet INT, date DATE, hour TIME, <ins>idUser INT</ins>, reason VARCHAR(255), checkByDoctor TINYINT) |
 | diagnotic(#idDiagnostic INT, <ins>idUser INT</ins>, description VARCHAR(255), prescription VARCHAR(255)) |
 
+#: Clé primaire
+_: Clé étrangère
+
 > **Note**:
 La base de donnée est en Inno DB
 
