@@ -50,8 +50,8 @@ Une fois le logiciel installé, l'application puis cliquer sur "Start".
 |    Schéma de la base de donnée     |
 | ------|
 | user(#idUser INT, firstname VARCHAR(255), lastname VARCHAR(255), login VARCHAR(255), password VARCHAR(255), birthday DATE, size INT, weight INT, gender VARCHAR(50), role INT)  |
-| meet(#idMeet INT, date DATE, hour TIME, idUser INT, reason VARCHAR(255), checkByDoctor TINYINT) |
-| diagnotic(#idDiagnostic INT, idUser INT, description VARCHAR(255), prescription VARCHAR(255)) |
+| meet(#idMeet INT, date DATE, hour TIME, <ins>idUser INT</ins>, reason VARCHAR(255), checkByDoctor TINYINT) |
+| diagnotic(#idDiagnostic INT, <ins>idUser INT</ins>, description VARCHAR(255), prescription VARCHAR(255)) |
 
 > **Note**:
 La base de donnée est en Inno DB
