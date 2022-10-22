@@ -5,18 +5,18 @@
 Application médicale qui permet la gestion & prise de rendez-vous.
 
 > **Note**:
-L'application a été réalisée dans le cadre d'une épreuve au World Skills 2022 (finale régionale à Bordeaux 🇫🇷)
+L'application a été réalisée dans le cadre d'une épreuve aux World Skills 2022 (finale régionale à Bordeaux 🇫🇷)
 
-### ✦ Options supplémentaires implémentés
+### ✦ Options supplémentaires implémentées
 
-- Saisie automatique des informations du patient (poids, taille..) lors de la gestion pour le médecin si le patient a déjà eu l'occasion de se faire traiter par le practicien en question.
+- Saisie automatique des informations du patient (poids, taille..) lors de la gestion pour le médecin si le patient a déjà eu l'occasion de se faire traiter par le praticien en question.
 
 ### ✦ Idée d'amélioration
 
 - Vérification des champs de formulaires (date, caractères renseignés pour le mdp, min 3 caractères..).
-- Faire fonctionner les checkboxs pour l'engagement du patient sur la prise de rdv & lors de l'inscription.
+- Faire fonctionner les checkboxs pour l'engagement du patient sur la prise de rendez-vous & lors de l'inscription.
 - Ajouter des filtres sur la liste de rdv du docteur.
-- Faire fonctionner le compteur de page & le bouton ajout manuel d'un patient sur la page liste des patients.
+- Faire fonctionner le compteur de pages & le bouton ajout manuel d'un patient sur la page liste des patients.
 
 ### ✦ Technologies utilisées
 
@@ -31,14 +31,14 @@ L'application a été réalisée dans le cadre d'une épreuve au World Skills 20
 
 ### ✦ Documentation
 
-Afin de pouvoir mettre en place le site "Medway" sur sa machine il est necessaire de réaliser plusieurs étapes cités ci-dessous.
+Afin de pouvoir mettre en place le site "Medway" sur sa machine il est nécessaire de réaliser plusieurs étapes citées ci-dessous.
 
 1. Télécharger le logiciel Mamp afin de pouvoir utiliser son ordinateur commee serveur local.
 Une fois le logiciel installé, l'application puis cliquer sur "Start".
 
 2. Accedez au répertoire application/MAMP/htdocs/ puis coller le répertoire contenant l'intégralité du code disponible en téléchargement sur ce repository.
 
-3. Coller le script .sql disponible à partir du repertoire "sql" de ce repository dans votre Phpmyadmin (http://localhost:8888/phpMyAdmin5/) à l'aide de l'option "Nouvelle base de donnéees" -> "Importer".
+3. Coller le script .sql disponible à partir du répertoire "sql" de ce repository dans votre Phpmyadmin (http://localhost:8888/phpMyAdmin5/) à l'aide de l'option "Nouvelle base de donnéees" -> "Importer".
 
 4. Accéder au site à l'aide de l'URL (http://localhost:8888/medway/).
 
