@@ -33,19 +33,19 @@ L'application a été réalisée dans le cadre d'une épreuve au World Skills 20
 
 Afin de pouvoir mettre en place le site "Medway" sur sa machine il est necessaire de réaliser plusieurs étapes cités ci-dessous.
 
->*1. Télécharger le logiciel Wamp sur Windows, Mamp sur Mac & Lamp sur Linux afin de pouvoir utiliser son ordinateur commee serveur local.
+1. Télécharger le logiciel Wamp sur Windows, Mamp sur Mac & Lamp sur Linux afin de pouvoir utiliser son ordinateur commee serveur local.
 >    Une fois le logiciel installé, lancez le service*
 
 >*2. Accedez au répertoire /c*
 
+> **Warning**:
+
 ### ✦ Schéma MCD de la base de donnée MySQL
 
-| Format        | Syntaxe      | Exemple |
-| ------|-----|-----|
-| Italique  	| \*Texte\* 	| *C'est en italique* 	|
+|    Schéma MCD de la base de donnée     |
+| ------|
+| Texte ici	|
 
-
-
-> **Warning**:
+>* L'intégralité du *
 
 https://user-images.githubusercontent.com/60849907/197188581-21663556-937a-4fff-9a2f-d0c79c47e70a.mp4
