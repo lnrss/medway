@@ -45,11 +45,13 @@ Une fois le logiciel installé, l'application puis cliquer sur "Start".
 > **Warning**:
 > Vérifiez bien que la version PHP est en 8.0.8
 
-### ✦ Schéma MCD de la base de donnée MySQL
+### ✦ Schéma de la base de donnée MySQL
 
-|    Schéma MCD de la base de donnée     |
+|    Schéma de la base de donnée     |
 | ------|
-| Texte ici	|
+| user(#idUser INT, firstname VARCHAR(255), lastname VARCHAR(255), login VARCHAR(255), password VARCHAR(255), birthday DATE, size INT, weight INT, gender VARCHAR(50), role INT)  |
+| meet(#idMeet INT, date DATE, hour TIME, idUser INT, reason VARCHAR(255), checkByDoctor TINYINT) |
+| diagnotic(#idDiagnostic INT, idUser INT, description VARCHAR(255), prescription VARCHAR(255)) |
 
 > **Note**:
 La base de donnée est en Inno DB
