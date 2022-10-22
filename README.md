@@ -34,15 +34,16 @@ L'application a été réalisée dans le cadre d'une épreuve au World Skills 20
 Afin de pouvoir mettre en place le site "Medway" sur sa machine il est necessaire de réaliser plusieurs étapes cités ci-dessous.
 
 1. Télécharger le logiciel Mamp afin de pouvoir utiliser son ordinateur commee serveur local.
-Une fois le logiciel installé, l'application puis cliquer sur "Start" (vérifiez bien que la version PHP est en 8.0.8).
+Une fois le logiciel installé, l'application puis cliquer sur "Start".
 
-2. Accedez au répertoire >*application/MAMP/htdocs/* puis coller le répertoire contenant l'intégralité du code disponible en téléchargement sur ce repository.
+2. Accedez au répertoire >* application/MAMP/htdocs/ * puis coller le répertoire contenant l'intégralité du code disponible en téléchargement sur ce repository.
 
-3. Coller le script .sql disponible à partir du repertoire "sql" de ce repository dans votre Phpmyadmin >*(http://localhost:8888/phpMyAdmin5/)* à l'aide de l'option "Nouvelle base de donnéees" -> "Importer".
+3. Coller le script .sql disponible à partir du repertoire "sql" de ce repository dans votre Phpmyadmin >* (http://localhost:8888/phpMyAdmin5/) * à l'aide de l'option "Nouvelle base de donnéees" -> "Importer".
 
-4. Accéder au site à l'aide de l'URL >*(http://localhost:8888/medway/)*.
+4. Accéder au site à l'aide de l'URL >* (http://localhost:8888/medway/) *.
 
 > **Warning**:
+> Vérifiez bien que la version PHP est en 8.0.8
 
 ### ✦ Schéma MCD de la base de donnée MySQL
 
