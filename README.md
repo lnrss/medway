@@ -21,17 +21,17 @@ L'application a été réalisée dans le cadre d'une épreuve au World Skills 20
 ### ✦ Technologies utilisées
 
 ɢʀᴀᴘʜɪsᴍᴇ ﹠ ᴍᴏᴛɪᴏɴ ᴅᴇsɪɢɴ ↓
-- Illustrator / Figma
-- After Effects
+`- Illustrator / Figma`
+`- After Effects`
 
 ᴅᴇ́ᴠᴇʟᴏᴘᴘᴇᴍᴇɴᴛ ғʀᴏɴᴛ﹣ᴇɴᴅ ﹠ ʙᴀᴄᴋ﹣ᴇɴᴅ ↓
-- HTML5 / CSS3 / JavaScript
-- PHP
-- MySQL
+`- HTML5 / CSS3 / JavaScript`
+`- PHP`
+`- MySQL`
 
 ### ✦ Documentation
 
- `Afin de pouvoir mettre en place le site "Medway" sur sa machine il est necessaire de réaliser plusieurs étapes cités ci-dessous`
+Afin de pouvoir mettre en place le site "Medway" sur sa machine il est necessaire de réaliser plusieurs étapes cités ci-dessous.
 
 >*1. Télécharger le logiciel Wamp sur Windows, Mamp sur Mac & Lamp sur Linux afin de pouvoir utiliser son ordinateur commee serveur local.
 >    Une fois le logiciel installé, lancez le service*
