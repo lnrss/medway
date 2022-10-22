@@ -1,3 +1,29 @@
+<?php
+session_start();
+include('assets/constantes.php');
+global $emptyError1;
+
+if(isset($_POST["loginSubmit"])) {
+    $hour = htmlspecialchars($_POST["hourInput"]);
+    $doctor = htmlspecialchars($_POST["doctorInput"]);
+    $date = htmlspecialchars($_POST["dateInput"]);
+    $reason = htmlspecialchars($_POST["reasonInput"]);
+    $qw=$connection->prepare("SELECT u.*, m.* FROM user u INNER JOIN meet m ON u.idUser = m.idUser WHERE u.login=?");
+    $qw->execute(array($doctor));
+    $res=$qw->fetch();
+    // if(strtotime($res['date']) == strtotime($date) && !strtotime($res['hour']) >= strtotime($hour) + 1800){
+    //     $emptyError1 = '<div class="errorInput">
+    //                         Le rendez-vous n\'est pas disponible, essayez une autre heure.
+    //                     </div>';
+    // } else{
+        $qw = $connection->prepare("INSERT into meet(date, hour, idUser, loginDoctor, reason) values(?,?,?,?,?)");
+        $qw->execute(array($date, $hour, $_SESSION["id"], $doctor, $reason));
+    // }
+    }
+
+$docOption = $connection->query("SELECT * FROM user WHERE role = 2");
+$doc = $docOption->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -19,42 +45,47 @@
                 <h3 id="titlePageLogin">
                     Prendre rendez-vous
                 </h3>
-                <div id="inputsContainer">
+                <form method="POST" action="" id="inputsContainer">
                     <div>
                         <label for="hourInput" id="hourLabel" class="labelInput">
                             <span class="allLabels">Heure*</span>
-                            <input type="text" id="hourInput" class="allInputs" placeholder="hh/mm">
+                            <input type="time" id="hourInput" name="hourInput" class="allInputs" placeholder="hh/mm">
+                            <?= $emptyError1 ?>
                         </label>
                     </div>
                     <div>
                         <label for="doctorInput" id="doctorLabel" class="labelInput">
                             <span class="allLabels">Médecin*</span>
-                            <select type="text" id="doctorInput" class="allInputs" style="width:360px">
-                                <option value="">Sélectionnez votre médecin</option>
+                            <select type="text" id="doctorInput" name="doctorInput" class="allInputs" style="width:360px">
+                                <?php foreach($doc as $val){
+                                    if(isset($val)): ?>
+                                        <option selected value="<?= $val['login'] ?>"> <?= $val['lastname'].' '.$val['firstname'] ?> </option>
+                                    <?php 
+                                    endif;
+                                } ?>
                             </select>
                         </label>
                     </div>
                     <div>
                         <label for="dateInput" id="dateLabel" class="labelInput">
                             <span class="allLabels">Date*</span>
-                            <input type="date" id="dateInput" class="allInputs" placeholder="Votre identifiant">
-                            <span id="errorDateDoctor">Le rendez-vous n'est pas disponible, essayez une autre date/heure.</span>
+                            <input type="date" id="dateInput" name="dateInput" class="allInputs" placeholder="Votre identifiant">
                         </label>
                     </div>
                     <div>
                         <label for="hourInput" id="hourLabel" class="labelInput">
                             <span class="allLabels">Raison*</span>
-                            <textarea name="" id="reasonInput" class="allInputs" placeholder="Votre raison du rendez-vous" cols="30" rows="6"></textarea>
+                            <textarea id="reasonInput" name="reasonInput" class="allInputs" placeholder="Votre raison du rendez-vous" cols="30" rows="6"></textarea>
                         </label>
                     </div>
                     <div id="consentCGV">
                         <label for="checkboxCGV">
-                            <input type="checkbox" id="checkboxCGV">
+                            <input type="checkbox" id="checkboxCGV" name="checkboxCGV">
                             <span id="descCGV">Je consent mon engagement</span>
                         </label>
                     </div>
-                    <input type="button" value="Je prend rendez-vous" id="loginSubmit">
-                </div>
+                    <input type="submit" value="Je prend rendez-vous" id="loginSubmit" name="loginSubmit">
+                </form>
                 
                 <img src="assets/img/avatarLogin.png" alt="Image de l'égerie de Medway" id="avatarLogin">
             </section>

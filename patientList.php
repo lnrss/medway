@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('assets/constantes.php');
+$listClients = $connection->query("SELECT m.*, u.* FROM meet m INNER JOIN user u ON m.idUser = u.idUser WHERE loginDoctor = '".$_SESSION["login"]."' AND checkByDoctor = false ORDER BY m.date AND m.hour LIMIT 9");
+$clients = $listClients->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -34,115 +40,23 @@
                     <span id="dateCreation">Date</span>
                     <span id="hourCreation">Heure</span>
                 </div>
-                <div class="lineContainer">
-                    <span class="patientName">
-                        John Doe
-                    </span>
-                    <span class="patientDate">
-                        19/12/2022
-                    </span>
-                    <span class="patientHour">
-                        18h21
-                    </span>
-                    <input class="patientButton" type="button" value="Prendre en charge">
-                </div>
-                <div class="lineContainer">
-                    <span class="patientName">
-                        John Doe
-                    </span>
-                    <span class="patientDate">
-                        19/12/2022
-                    </span>
-                    <span class="patientHour">
-                        18h21
-                    </span>
-                    <input class="patientButton" type="button" value="Prendre en charge">
-                </div>
-                <div class="lineContainer">
-                    <span class="patientName">
-                        John Doe
-                    </span>
-                    <span class="patientDate">
-                        19/12/2022
-                    </span>
-                    <span class="patientHour">
-                        18h21
-                    </span>
-                    <input class="patientButton" type="button" value="Prendre en charge">
-                </div>
-                <div class="lineContainer">
-                    <span class="patientName">
-                        John Doe
-                    </span>
-                    <span class="patientDate">
-                        19/12/2022
-                    </span>
-                    <span class="patientHour">
-                        18h21
-                    </span>
-                    <input class="patientButton" type="button" value="Prendre en charge">
-                </div>
-                <div class="lineContainer">
-                    <span class="patientName">
-                        John Doe
-                    </span>
-                    <span class="patientDate">
-                        19/12/2022
-                    </span>
-                    <span class="patientHour">
-                        18h21
-                    </span>
-                    <input class="patientButton" type="button" value="Prendre en charge">
-                </div>
-                <div class="lineContainer">
-                    <span class="patientName">
-                        John Doe
-                    </span>
-                    <span class="patientDate">
-                        19/12/2022
-                    </span>
-                    <span class="patientHour">
-                        18h21
-                    </span>
-                    <input class="patientButton" type="button" value="Prendre en charge">
-                </div>
-                <div class="lineContainer">
-                    <span class="patientName">
-                        John Doe
-                    </span>
-                    <span class="patientDate">
-                        19/12/2022
-                    </span>
-                    <span class="patientHour">
-                        18h21
-                    </span>
-                    <input class="patientButton" type="button" value="Prendre en charge">
-                </div>
-                <div class="lineContainer">
-                    <span class="patientName">
-                        John Doe
-                    </span>
-                    <span class="patientDate">
-                        19/12/2022
-                    </span>
-                    <span class="patientHour">
-                        18h21
-                    </span>
-                    <input class="patientButton" type="button" value="Prendre en charge">
-                </div>
-                <div class="lineContainer">
-                    <span class="patientName">
-                        John Doe
-                    </span>
-                    <span class="patientDate">
-                        19/12/2022
-                    </span>
-                    <span class="patientHour">
-                        18h21
-                    </span>
-                    <input class="patientButton" type="button" value="Prendre en charge">
-                </div>
-                
+                <?php foreach($clients as $val){
+                        if(isset($val)): ?>
+                        <div class="lineContainer">
+                            <span class="patientName">
+                                <?= $val['lastname'].' '. $val['firstname']?>
+                            </span>
+                            <span class="patientDate">
+                                <?= $val['date'] ?>
+                            </span>
+                            <span class="patientHour">
+                                <?= $val['hour'] ?>
+                            </span>
+                            <a href="patient.php?id=<?= $val['idUser'] ?>&idm=<?= $val['idMeet'] ?>" class="patientButton">Prendre en charge</a>
+                        </div>
+                    <?php 
+                    endif;
+                } ?>     
                 <div id="countPageNumberBottomContainer">
                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 12px;cursor:pointer"><path d="M6.73232 0.264139C6.90372 0.433317 7 0.662742 7 0.901961C7 1.14118 6.90372 1.37061 6.73232 1.53978L2.2068 6.00545L6.73232 10.4711C6.89886 10.6413 6.99101 10.8691 6.98893 11.1057C6.98684 11.3422 6.89069 11.5685 6.72118 11.7358C6.55168 11.903 6.32237 11.9979 6.08266 12C5.84295 12.002 5.612 11.9111 5.43958 11.7468L0.267679 6.64327C0.0962845 6.47409 1.02371e-07 6.24467 1.02371e-07 6.00545C1.02371e-07 5.76623 0.0962845 5.5368 0.267679 5.36762L5.43958 0.264139C5.61102 0.0950107 5.84352 0 6.08595 0C6.32837 0 6.56087 0.0950107 6.73232 0.264139V0.264139Z" fill="white"/></svg>
                 <span class="countPageNumberBottom activePage">1</span>

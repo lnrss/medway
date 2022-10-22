@@ -143,16 +143,16 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-input:-webkit-autofill{
+/* input:-webkit-autofill{
     -webkit-text-fill-color: #fff !important;
-}
+} */
 
 input:-webkit-autofill {
-    -webkit-box-shadow: inset 0 0 0px 9999px var(--first-color-darken);
+    -webkit-box-shadow: inset 0 0 0px 9999px #fff;
   }
 
 input::placeholder {
-    color: #9B9DBE;
+    color: #C0C0C0;
   }
 
 button,
@@ -163,7 +163,7 @@ input {
 
 input {
     font-weight: 500;
-    caret-color: #fff;
+    caret-color: #7B85F0;
   }
   
   input::placeholder {
@@ -620,7 +620,7 @@ header{
     background: rgba(255, 255, 255, 0.2);
     color: var(--first-color-lighten);
     border-radius: 40px;
-    width: 135px;
+    width: 212px;
     align-items: center;
     height: 35px;
     font-size: 14px;
@@ -777,4 +777,11 @@ header{
     border-radius: 374px;
     padding: 8px 19px;
     font-size: 12px;
+    text-decoration: none;
+}
+
+.errorInput{
+    margin-top: 6px;
+    color: var(--first-color);
+    margin-left: 20px;
 }

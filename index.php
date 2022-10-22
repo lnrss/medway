@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -8,7 +11,6 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
         <script type="text/javascript" src="assets/scripts/jquery-3.6.0.js"></script>
-
     </head>
     <body>
         <?php

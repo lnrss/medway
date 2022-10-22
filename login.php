@@ -1,3 +1,29 @@
+<?php
+session_start();
+include('assets/constantes.php');
+global $emptyError1;
+
+if(isset($_POST["loginSubmit"])) {
+    $login = htmlspecialchars($_POST["usernameInput"]);
+    $password = htmlspecialchars($_POST["passwordInput"]);
+    $qw=$connection->prepare("SELECT * FROM user WHERE login=? limit 1");
+    $qw->execute(array($login));
+    $res=$qw->fetch();
+    if(isset($res['password'])){
+        if(password_verify($password, $res['password'])){
+            $_SESSION["id"] = $res["idUser"];
+            $_SESSION["firstname"] = $res["firstname"];
+            $_SESSION["lastname"] = $res["lastname"];
+            $_SESSION["login"] = $res["login"];
+            $_SESSION["role"] = $res["role"];
+            header("Location: http://localhost:8888/medway");
+        }}
+    else
+        $emptyError1 = '<div class="errorInput">
+                            Login ou mot de passe incorrect
+                        </div>';
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -19,22 +45,23 @@
                 <h3 id="titlePageLogin">
                     Se connecter
                 </h3>
-                <div id="inputsContainer">
+                <form method="POST" action="" id="inputsContainer">
                     <div>
                         <label for="usernameInput" id="usernameLabel" class="labelInput">
                             <span class="allLabels">Nom d'utilisateur*</span>
-                            <input type="text" id="usernameInput" class="allInputs" placeholder="Login">
+                            <input type="text" id="usernameInput" name="usernameInput" class="allInputs" placeholder="Login">
                         </label>
                     </div>
                     <div>
                         <label for="passwordInput" id="passwordLabel" class="labelInput">
                             <span class="allLabels">Mot de passe*</span>
-                            <input type="password" id="passwordInput" class="allInputs" placeholder="Votre mot de passe">
+                            <input type="password" id="passwordInput" name="passwordInput" class="allInputs" placeholder="Votre mot de passe">
                             <span id="forgetPassword">Mot de passe oublié</span>
+                            <?= $emptyError1 ?>
                         </label>
                     </div>
-                    <input type="button" value="Se connecter" id="loginSubmit">
-                </div>
+                    <input type="submit" value="Se connecter" id="loginSubmit" name="loginSubmit">
+                </form>
                 
                 <img src="assets/img/avatarLogin.png" alt="Image de l'égerie de Medway" id="avatarLogin">
             </section>
